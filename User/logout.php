@@ -1,0 +1,9 @@
+<?php
+session_start();
+session_unset($_SESSION['name']);
+session_destroy();
+ob_start();
+header("location:../home.php");
+ob_end_flush(); 
+exit();
+?>
